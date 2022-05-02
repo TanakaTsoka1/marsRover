@@ -5,12 +5,10 @@ var bounds = [];
 for(var line = 0; line < grid.length; line++){
     bounds.push(grid[line])
 }
-let input = readMe.split('\n')[2];
 
+let input = readMe.split('\n')[2];
 let startingLocation = readMe.split('\n')[1];
-for (var i = 0; i < startingLocation.length; i++) {
-    console.log(startingLocation.charAt(i));
-  }
+
 const directions = ["N", "E", "S", "W"];
 let x = Number(startingLocation.charAt(0)), y = Number(startingLocation.charAt(1));
 let direction = directions.findIndex((d) => d == startingLocation.charAt(2));
