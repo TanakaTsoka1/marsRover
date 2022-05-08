@@ -1,13 +1,13 @@
 var fs =  require('fs')
-var readMe = fs.readFileSync('coordinates.txt', 'utf8');
-var grid = readMe.split('\n')[0];
+var coordinates = fs.readFileSync('coordinates.txt', 'utf8');
+var grid = coordinates.split('\n')[0];
 var bounds = [];
 for(var line = 0; line < grid.length; line++){
     bounds.push(grid[line])
 }
 
-let input = readMe.split('\n')[2];
-let startingLocation = readMe.split('\n')[1];
+let input = coordinates.split('\n')[2];
+let startingLocation = coordinates.split('\n')[1];
 
 const directions = ["N", "E", "S", "W"];
 let x = Number(startingLocation.charAt(0)), y = Number(startingLocation.charAt(1));
